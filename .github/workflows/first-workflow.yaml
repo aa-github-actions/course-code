@@ -1,7 +1,7 @@
 name: First Workflow
 on: [push]
 jobs:
-    run-shell-commands:
+    run-shell-commands: # job name
         runs-on: ubuntu-latest
         steps:
             - name: echo a string
@@ -16,12 +16,12 @@ jobs:
                 echo "Directory content: $content"
                 echo "Node version: $node_version"
                 echo "npm version: $npm_version"
-    parallel-job-macos:
+    parallel-job-macos: # job name
         runs-on: macos-latest
         steps:
             - name: View SW Version
               run: sw_vers
-    dependant-job:
+    dependant-job: # job name
         runs-on: windows-latest
         needs: [run-shell-commands]
         steps:
