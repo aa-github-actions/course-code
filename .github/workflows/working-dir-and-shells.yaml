@@ -14,6 +14,11 @@ jobs:
           echo $GITHUB_SHA # commit hash
           echo $GITHUB_REPOSITORY # repository name
           echo $GITHUB_WORKSPACE # workspace directory
+      - name: Change working directory
+        working-directory: /home/runner
+        run: |
+          echo "Current working directory: $(pwd)"
+          echo "Directory content: $(ls -la)"
   display-wd-info-windows:
     runs-on: windows-latest
     defaults:
