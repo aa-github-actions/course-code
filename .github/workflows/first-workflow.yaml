@@ -1,0 +1,18 @@
+name: First Workflow
+on: [push]
+jobs:
+    run-shell-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo a string
+              run: echo "Hello, world!"
+            - name: Multiline commands
+              run: |
+                _pwd=$(pwd)
+                content=$(ls -la)
+                node_version=$(node -v)
+                npm_version=$(npm -v)
+                echo "Current working directory: $_pwd"
+                echo "Directory content: $content"
+                echo "Node version: $node_version"
+                echo "npm version: $npm_version"
