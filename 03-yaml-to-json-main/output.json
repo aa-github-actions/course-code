@@ -1,0 +1,49 @@
+{
+  "323": 123,
+  "key": "value",
+  "key with quotes": "value with quotes",
+  "special_chars": "special: characters",
+  "single quotes": "a value 'in' single quotes \\u263A \\n",
+  "double quotes": "☺ ☻ \n",
+  "array": [
+    "hello",
+    "world"
+  ],
+  "json array": [
+    "hello",
+    "world"
+  ],
+  "null": null,
+  "also null": null,
+  "boolean": true,
+  "object (maps)": {
+    "key": "value",
+    "another": "one",
+    "nested object": {
+      "nested key": "nested value"
+    }
+  },
+  "json style object": {
+    "key": "  value",
+    "another": "one",
+    "nested object": {
+      "nested key": "nested value"
+    }
+  },
+  "sequence": [
+    "Item 1",
+    "Item 2",
+    0.5,
+    {
+      "key1": "value1",
+      "key2": "value2",
+      "key3": "value3"
+    },
+    [
+      "nested array item 1",
+      "nested array item 2"
+    ]
+  ],
+  "literal block": "This is a literal block\nthat spans multiple lines\nand preserves newlines\nand other formatting\n",
+  "folded block": "This is a folded block that spans multiple lines but folds newlines into spaces and other formatting\nleave one empty line above this line to create a new line in the output\n"
+}

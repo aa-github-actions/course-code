@@ -1,0 +1,48 @@
+key: value
+"key with quotes": "value with quotes"
+323: 123
+# some comment here
+special_chars: "special: characters"
+single quotes: 'a value ''in'' single quotes \u263A \n'
+double quotes: "\u263A \u263B \n"
+array:
+  - hello
+  - world
+json array: [hello, world]
+
+null: null
+also null: ~
+boolean: true
+
+object (maps):
+  key: value
+  another: one
+  nested object:
+    nested key: nested value
+json style object: {"key": "  value", "another": "one", "nested object": {"nested key": "nested value"}}
+
+sequence:
+  - Item 1
+  - Item 2
+  - 0.5
+  # object
+  - key1: value1
+    key2: value2
+    key3: value3
+  # array
+  - - nested array item 1
+    - nested array item 2
+
+literal block: |
+  This is a literal block
+  that spans multiple lines
+  and preserves newlines
+  and other formatting
+folded block: >
+  This is a folded block
+  that spans multiple lines
+  but folds newlines into spaces
+  and other formatting
+
+  leave one empty line above this line
+  to create a new line in the output
