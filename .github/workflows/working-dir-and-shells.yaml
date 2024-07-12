@@ -1,0 +1,23 @@
+name: Working Dirs and Shells
+on: [push]
+jobs:
+  display-wd-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Working Directory & List Files
+        run: |
+          echo "Current working directory: $(pwd)"
+          echo "Directory content: $(ls -la)"
+          echo $GITHUB_SHA # commit hash
+          echo $GITHUB_REPOSITORY # repository name
+          echo $GITHUB_WORKSPACE # workspace directory
+  display-wd-info-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Display Working Directory & List Files
+        run: |
+          Get-Location
+          dir
+          echo $env:GITHUB_SHA
+          echo $env:GITHUB_REPOSITORY
+          echo $env:GITHUB_WORKSPACE
