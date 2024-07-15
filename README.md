@@ -20,3 +20,5 @@ echo "::endgroup::"
 echo "::add-mask::Secret String"
 echo "Secret String"
 ```
+
+#### Small change to test workflow
