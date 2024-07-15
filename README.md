@@ -20,5 +20,9 @@ echo "::endgroup::"
 echo "::add-mask::Secret String"
 echo "Secret String"
 ```
+### Trigger with gh cli
+```
+gh workflow run <workflow name> -f ke1="my message here" <more key=value pairs> -f environment=production --ref=main
+```
 
 #### Small change to test workflow
