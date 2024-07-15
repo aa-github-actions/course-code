@@ -1,0 +1,16 @@
+name: Simple Action
+on: [push]
+
+jobs:
+  simple-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: greet
+#             repo_name/action_name@branch-or-commit-id-or-tag
+        uses: actions/hello-world-javascript-action@main
+# inputs of the action
+        with:
+          who-to-greet: 'StelTheo'
+      - name:
+        run: echo "${{ steps.greet.outputs.time }}"
