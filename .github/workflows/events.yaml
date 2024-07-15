@@ -1,6 +1,22 @@
 name: Repository Events
 on:
   push:
+    branches:
+      - main
+      - "feature/*" # this matches feature/featA, feature/featB, etc, but not feature/featA/featB
+      - "feature/**" # this matches feature/featA, feature/featA/featB, etc.
+      - "!feature/featA" # this matches all branches except feature/featA. Be carefull with order of branches!
+    # branches-ignore:
+    #     - develop
+    #     - dev
+    tags:
+      - v1.* # matches v1.0, v1.1, etc.
+    #   - v*
+      - "!v1.1.1" # matches all tags except v1.1.1
+    paths: # this is a list of paths that will trigger the workflow
+      - "src/**" # this matches src/index.js, src/lib/index.js, etc.
+      - "docs/*" # this matches docs/index.md, docs/README.md, etc.
+      - "!.github/**" # this matches all paths except .github
   pull_request:
     types: [opened, assigned, reopened, synchronize]
   issues:
